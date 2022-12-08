@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rubik:wght@300;400;500;700&display=swap');
+@import "variables";
+@import "header";
+@import "main";
+@import "about";
+@import "how-to-apply";
+@import "FAQ";
+@import "clients";
+@import "footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: $bg;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+button {
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+}
+
+.button {
+    background: $main;
+    border-radius: 5px;
+    color: $white;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-style: normal;
+    text-transform: uppercase;
+    transition: 0.6s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.title {
+    color: $main;
+    font-size: 24px;
+    font-weight: 700;
+}

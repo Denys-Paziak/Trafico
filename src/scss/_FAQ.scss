@@ -1,0 +1,188 @@
+.FAQ {
+    position: relative;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        padding-top: 220px;
+        padding-bottom: 100px;
+
+        @media (max-width: 991.98px) {
+            padding-top: 50px;
+        }
+
+    }
+
+    h2 {
+        font-family: 'DM Serif Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 140%;
+        margin-top: 44px;
+
+        @media (max-width: 1399.98px) {
+            font-size: 50px;
+        }
+
+    }
+}
+
+.accordions {
+    margin-top: 170px;
+}
+
+.accordion {
+    width: 100%;
+    margin-top: 20px;
+
+    &__intro {
+        position: relative;
+        padding: 25px 120px 25px 35px;
+        font-size: 18px;
+
+        line-height: 30px;
+        box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+        background-color: $white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        cursor: pointer;
+
+        @media (max-width: 575.98px) {
+            font-size: 14px;
+        }
+    }
+
+
+    &__intro-status {
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        transform: translateY(-50%);
+        width: 20px;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: $main;
+        }
+
+        &:before {
+            opacity: 1;
+            transform: rotate(90deg);
+            transition: 0.6s;
+        }
+
+    }
+
+    &__content {
+        max-height: 0px;
+        box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+        background: #FFF7F5;
+        overflow: hidden;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: 0.6s;
+    }
+
+    p {
+        padding: 60px 120px 40px 35px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 30px;
+    }
+
+}
+
+.accordion.active {
+    .accordion__intro-status {
+        &:before {
+            opacity: 0;
+        }
+
+    }
+}
+
+.FAQ-load-more {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(2, 82%, 60%, 20%);
+    color: $main;
+    padding: 30px 0;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: 0.6s;
+
+    &__status {
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        transform: translateY(-50%);
+        width: 20px;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: $main;
+        }
+
+        &:before {
+            opacity: 1;
+            transform: rotate(90deg);
+            transition: 0.6s;
+        }
+    }
+
+}
+
+.FAQ-load-more:hover {
+    background: $white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.FAQ-vector {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background: #FDEDE8;
+        border-top-left-radius: 200px;
+    }
+}
+
+.FAQ-img {
+    position: absolute;
+    right: -100px;
+    top: 100px;
+    z-index: -1;
+
+    @media (max-width: 1199.98px) {
+        position: relative;
+        right: 0px;
+        width: 100%;
+    }
+
+    @media (max-width: 575.98px) {
+        top: 50px;
+    }
+}
